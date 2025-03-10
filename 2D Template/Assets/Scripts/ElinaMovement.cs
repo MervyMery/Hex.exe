@@ -21,10 +21,10 @@ public class ElinaMovement : MonoBehaviour
     }
     public void Move(InputAction.CallbackContext context)
     {
-        animator.SetBool("isWalking", true);
+        animator.SetBool("isRunning", true);
         if (context.canceled)
         {
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
             animator.SetFloat("LastInputX", moveInput.x);
             animator.SetFloat("LastInputY", moveInput.y);
         }
